@@ -1,0 +1,8 @@
+{
+  "name": "chemicalmix-frontend",
+  "version": "1.0.0",
+  "description": "ChemicalMix - Smart Chemical Solution Mixing Calculator Frontend",
+  "scripts": {
+    "build": "node inject-env.js"
+  }
+}

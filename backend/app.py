@@ -21,7 +21,14 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from services.mixing import calculate_mixing
 
 app = Flask(__name__, static_folder=None)
-CORS(app)  # Enable CORS for frontend-backend communication
+
+# Configure CORS - allows specified origin(s) or all origins by default
+cors_origins_env = os.environ.get('CORS_ALLOWED_ORIGINS', '*').strip()
+if cors_origins_env == '*':
+    CORS(app, resources={r"/api/*": {"origins": "*"}})
+else:
+    allowed_origins = [o.strip() for o in cors_origins_env.split(',') if o.strip()]
+    CORS(app, resources={r"/api/*": {"origins": allowed_origins}})
 
 # Path to frontend directory
 FRONTEND_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'frontend')
@@ -55,10 +62,11 @@ def serve_js(filename):
 
 # ─── API Endpoints ───────────────────────────────────────────────────────────
 
+@app.route('/health', methods=['GET'])
 @app.route('/api/health', methods=['GET'])
 def health_check():
     """
-    Health check endpoint.
+    Health check endpoint for Render and uptime monitoring.
     Returns server status and version information.
     """
     return jsonify({
@@ -66,7 +74,7 @@ def health_check():
         'application': 'ChemicalMix',
         'version': '1.0.0',
         'description': 'Smart Chemical Solution Mixing Calculator'
-    })
+    }), 200
 
 
 @app.route('/api/calculate', methods=['POST'])
@@ -210,8 +218,9 @@ def compare():
 
 
 if __name__ == '__main__':
+    port = int(os.environ.get('PORT', 5000))
     print("=" * 60)
     print("  ChemicalMix - Smart Chemical Solution Mixing Calculator")
-    print("  Server running at http://localhost:5000")
+    print(f"  Server running at http://0.0.0.0:{port}")
     print("=" * 60)
-    app.run(host='0.0.0.0', port=5000, debug=False)
+    app.run(host='0.0.0.0', port=port, debug=False)

@@ -199,7 +199,50 @@ Both iterative methods converge to the exact solution.
 1. **Home** (`/`) – Landing page with features overview and method introduction
 2. **Calculator** (`/pages/calculator.html`) – Input parameters, calculate, and view results
 3. **Method Comparison** (`/pages/comparison.html`) – Detailed Jacobi vs Gauss-Seidel comparison
-4. **About** (`/pages/about.html`) – Project information, objectives, and team
+4. **Visualizations** (`/pages/visualizations.html`) – Interactive scientific charts & convergence graphs
+5. **About** (`/pages/about.html`) – Project information, objectives, and team
+
+---
+
+## 🚀 Deployment on Render
+
+ChemicalMix is production-ready and configured for 1-click deployment on [Render](https://render.com).
+
+### Option A: Unified Web Service (Recommended)
+
+Flask serves both the static SaaS frontend and the REST API via **Gunicorn**:
+
+1. Log in to [dashboard.render.com](https://dashboard.render.com) and click **New +** > **Web Service**.
+2. Connect your GitHub repository: `https://github.com/Premsai626/computational-mathematics`.
+3. Configure the settings:
+   - **Name**: `chemicalmix`
+   - **Environment / Runtime**: `Python 3`
+   - **Branch**: `main`
+   - **Region**: `Oregon (US West)` or your closest region
+   - **Build Command**: `pip install -r requirements.txt`
+   - **Start Command**: `gunicorn wsgi:app --bind 0.0.0.0:$PORT --workers 2 --threads 4 --timeout 120`
+   - **Health Check Path**: `/health`
+4. Add Environment Variables:
+   - `PYTHON_VERSION`: `3.11.9`
+   - `FLASK_ENV`: `production`
+   - `CORS_ALLOWED_ORIGINS`: `*`
+5. Click **Create Web Service**. Your app will deploy to a public URL like `https://chemicalmix.onrender.com`.
+
+*(Alternatively, use the included `render.yaml` Blueprint for automatic 1-click setup via **New +** > **Blueprint**).*
+
+### Option B: Decoupled Services (Static Site + Web Service)
+
+If you prefer hosting the frontend on Render's CDN:
+
+1. **Deploy Backend (Web Service)**:
+   - Follow Option A above. Note your backend URL (e.g. `https://chemicalmix-api.onrender.com`).
+2. **Deploy Frontend (Static Site)**:
+   - Click **New +** > **Static Site**.
+   - **Root Directory**: `frontend`
+   - **Build Command**: `node inject-env.js`
+   - **Publish Directory**: `.`
+   - **Environment Variable**: `BACKEND_URL` = `https://chemicalmix-api.onrender.com`
+3. Click **Create Static Site**.
 
 ---
 

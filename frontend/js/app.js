@@ -5,7 +5,12 @@
  * formatters, calculation history storage, and Flask REST API client.
  */
 
-const API_BASE = '';  // Same origin (Flask serves static files & REST API)
+// Base URL for backend API:
+// When deployed on a unified Render Web Service or locally, defaults to '' (same origin).
+// When deployed as a separate Render Static Site, uses window.CHEMICALMIX_CONFIG.API_BASE_URL.
+const API_BASE = (window.CHEMICALMIX_CONFIG && window.CHEMICALMIX_CONFIG.API_BASE_URL)
+    ? window.CHEMICALMIX_CONFIG.API_BASE_URL.replace(/\/+$/, '')
+    : '';
 
 document.addEventListener('DOMContentLoaded', () => {
     initSidebar();

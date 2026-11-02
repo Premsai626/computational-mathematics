@@ -36,3 +36,13 @@ wheels/
 .DS_Store
 Thumbs.db
 
+# Environment variables & secrets
+.env
+.env.*
+!.env.example
+
+# Node dependencies
+node_modules/
+npm-debug.log
+
+

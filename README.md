@@ -97,6 +97,7 @@ pip install -r requirements.txt
 ```
 
 This installs:
+
 - `flask` – Web framework for the API server
 - `flask-cors` – Cross-Origin Resource Sharing support
 - `numpy` – Numerical computing library
@@ -110,23 +111,23 @@ python app.py
 
 You should see:
 
-```
 ============================================================
   ChemicalMix - Smart Chemical Solution Mixing Calculator
-  Server running at http://localhost:5000
+  Server running at <http://localhost:5000>
 ============================================================
+
 ```
 
 ### Step 4: Open in Browser
 
-Navigate to: **http://localhost:5000**
+Navigate to: **<http://localhost:5000>**
 
 ---
 
 ## 📡 API Endpoints
 
 | Method | Endpoint | Description |
-|--------|----------|-------------|
+| -------- | ---------- | ------------- |
 | `GET` | `/api/health` | Server health check |
 | `POST` | `/api/calculate` | Calculate mixing proportions |
 | `POST` | `/api/compare` | Compare Jacobi vs Gauss-Seidel |
@@ -174,7 +175,7 @@ Content-Type: application/json
 ## 🧪 Sample Test Case
 
 | Parameter | Value |
-|-----------|-------|
+| ----------- | ------- |
 | Solution A Concentration | 20% |
 | Solution B Concentration | 50% |
 | Total Volume | 10 Litres |
@@ -183,7 +184,7 @@ Content-Type: application/json
 **Expected Result:**
 
 | Solution | Volume |
-|----------|--------|
+| ---------- | -------- |
 | Solution A | 5.0 Litres |
 | Solution B | 5.0 Litres |
 | **Total Volume** | **10.0 Litres** |
@@ -216,19 +217,17 @@ All charts are rendered dynamically using actual backend calculation data.
 ## 👥 Team
 
 | Name | Roll No | Role |
-|------|---------|------|
-| Student Name 1 | XXXX001 | Backend Development |
-| Student Name 2 | XXXX002 | Frontend Development |
-| Student Name 3 | XXXX003 | Algorithm Implementation |
-
-*(Update with actual team member details)*
+| ------ | --------- | ------ |
+| I.Prem sai | 25R21A6621 | Backend Development |
+| M.Sujeel | 25R21A6637 | Frontend Development |
+| B.Rushil | 25R21A6650 | Algorithm Implementation |
 
 ---
 
 ## 📝 Technologies
 
 | Technology | Purpose |
-|------------|---------|
+| ------------ | --------- |
 | Python 3 | Backend logic & mathematical computations |
 | Flask | REST API framework |
 | NumPy | Numerical computing & linear algebra |
@@ -246,4 +245,3 @@ This project is developed for educational purposes as part of a college PPVC cou
 ---
 
 *Built with ❤️ for Computational Mathematics*
-

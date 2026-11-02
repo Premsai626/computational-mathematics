@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overview — ChemicalMix Platform</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<div class="app-container">
+
+    <!-- ═══════════════════════ SIDEBAR NAVIGATION ═══════════════════════ -->
+    <aside class="app-sidebar" id="appSidebar">
+        <div>
+            <div class="sidebar-header">
+                <a href="/" class="sidebar-brand">
+                    <svg class="sidebar-logo-icon" viewBox="0 0 28 28" fill="none">
+                        <path d="M10 3C10 2.45 10.45 2 11 2H17C17.55 2 18 2.45 18 3V10L23.6 18.4C24.93 20.4 23.5 23 21.1 23H6.9C4.5 23 3.07 20.4 4.4 18.4L10 10V3Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M10 3H18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M8 17H20" stroke="#E57373" stroke-width="2" stroke-linecap="round"/>
+                        <circle cx="12" cy="19.5" r="1.5" fill="currentColor"/>
+                        <circle cx="16.5" cy="19" r="1" fill="#E57373"/>
+                    </svg>
+                    <div>
+                        <div class="sidebar-brand-text">Chemical<span>Mix</span></div>
+                        <span class="sidebar-badge">Scientific SaaS</span>
+                    </div>
+                </a>
+            </div>
+
+            <nav class="sidebar-nav">
+                <div class="nav-section-title">Workspace</div>
+                <ul class="nav-menu">
+                    <li>
+                        <a href="/" class="nav-item active">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/></svg>
+                            Overview
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/pages/calculator.html" class="nav-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="2" width="16" height="20" rx="2.5"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="16" y1="14" x2="16" y2="18"/><path d="M8 10h.01M12 10h.01M16 10h.01M8 14h.01M12 14h.01M8 18h.01M12 18h.01"/></svg>
+                            Solution Calculator
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/pages/comparison.html" class="nav-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+                            Method Comparison
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/pages/visualizations.html" class="nav-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 3v18h18"/><path d="M18 9l-5 5-4-4-6 6"/></svg>
+                            Visualizations
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="nav-section-title" style="margin-top: 22px;">Documentation</div>
+                <ul class="nav-menu">
+                    <li>
+                        <a href="/pages/about.html" class="nav-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                            About Project
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="sidebar-footer">
+            <div class="engine-status-card">
+                <div class="engine-status-dot online"></div>
+                <div class="engine-status-info">
+                    <div class="engine-status-text">Engine Active</div>
+                    <div class="engine-status-version">Python / NumPy 2.4.4</div>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- ═══════════════════════ MAIN VIEWPORT ═══════════════════════ -->
+    <div class="app-main">
+        <header class="top-header">
+            <div class="top-header-left">
+                <button class="mobile-sidebar-toggle" id="sidebarToggleBtn" aria-label="Toggle Navigation">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+                </button>
+                <div class="header-breadcrumbs">
+                    <span class="breadcrumb-root">ChemicalMix</span>
+                    <span class="breadcrumb-separator">/</span>
+                    <span class="breadcrumb-current">Overview Dashboard</span>
+                </div>
+            </div>
+            <div class="top-header-right">
+                <span class="header-tag"><span class="dot"></span>PPVC Mathematics Engine</span>
+                <a href="/pages/calculator.html" class="btn btn-primary btn-sm">
+                    <svg viewBox="0 0 16 16" fill="none"><path d="M8 3v10M3 8h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                    New Calculation
+                </a>
+            </div>
+        </header>
+
+        <main class="main-content">
+
+            <!-- 1. Welcome Section -->
+            <section class="welcome-banner">
+                <span class="welcome-tag">Scientific Platform</span>
+                <h1 class="welcome-title">Welcome to ChemicalMix</h1>
+                <div class="welcome-subtitle">Precision in every mixture.</div>
+                <p class="welcome-desc">
+                    Calculate exact chemical solution proportions and explore numerical linear algebra algorithms. ChemicalMix translates solute mass balances into simultaneous linear systems and solves them using Jacobi and Gauss-Seidel iterative methods.
+                </p>
+                <div class="welcome-actions">
+                    <a href="/pages/calculator.html" class="btn btn-primary btn-lg">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2.5"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="16" y1="14" x2="16" y2="18"/><path d="M8 10h.01M12 10h.01M16 10h.01M8 14h.01M12 14h.01M8 18h.01M12 18h.01"/></svg>
+                        Start a New Calculation
+                    </a>
+                    <a href="/pages/comparison.html" class="btn btn-secondary btn-lg">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+                        Explore Methods
+                    </a>
+                    <a href="/pages/visualizations.html" class="btn btn-secondary btn-lg">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M18 9l-5 5-4-4-6 6"/></svg>
+                        Open Analytics
+                    </a>
+                </div>
+            </section>
+
+            <!-- 2. System Status & Real Metric Cards -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <span class="stat-label">Total Calculations</span>
+                        <div class="stat-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                        </div>
+                    </div>
+                    <div class="stat-value" id="overviewTotalCalcCount">0</div>
+                    <div class="stat-meta">Tracked across sessions</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <span class="stat-label">Engine Status</span>
+                        <div class="stat-icon" style="background: var(--success-bg); color: var(--success);">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        </div>
+                    </div>
+                    <div class="stat-value" style="font-size: 1.25rem; font-weight: 700; color: var(--success);">Operational</div>
+                    <div class="stat-meta">Flask 3.1 &bull; REST API Online</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <span class="stat-label">Available Solvers</span>
+                        <div class="stat-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                        </div>
+                    </div>
+                    <div class="stat-value">2 <span class="stat-unit">Iterative</span></div>
+                    <div class="stat-meta">Jacobi &amp; Gauss-Seidel Methods</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <span class="stat-label">Target Precision</span>
+                        <div class="stat-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+                        </div>
+                    </div>
+                    <div class="stat-value font-mono">10<sup>-10</sup></div>
+                    <div class="stat-meta">L<sub>&infin;</sub> residual norm tolerance</div>
+                </div>
+            </div>
+
+            <!-- 3. Recent Calculations (True History from Storage) -->
+            <div class="card" style="margin-bottom: 28px;">
+                <div class="card-header">
+                    <div class="card-title-group">
+                        <div class="card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        </div>
+                        <div>
+                            <h2 class="card-title">Recent Calculations</h2>
+                            <p class="card-subtitle">Real-time log of computations performed in your workspace</p>
+                        </div>
+                    </div>
+                    <div id="recentCalcBadge"></div>
+                </div>
+
+                <div id="recentCalculationsContainer">
+                    <!-- Populated dynamically via JS from actual localStorage history -->
+                </div>
+            </div>
+
+            <!-- 4. Compact Mathematical Methods Overview -->
+            <div class="card" style="margin-bottom: 28px;">
+                <div class="card-header">
+                    <div class="card-title-group">
+                        <div class="card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                        </div>
+                        <div>
+                            <h2 class="card-title">Computational Methods Architecture</h2>
+                            <p class="card-subtitle">Simultaneous equation solving through matrix decomposition</p>
+                        </div>
+                    </div>
+                    <a href="/pages/comparison.html" class="btn btn-outline btn-sm">Full Benchmark &rarr;</a>
+                </div>
+
+                <div class="accuracy-grid">
+                    <div class="card" style="background:#FFFDFD; border-left: 3px solid var(--accent-primary);">
+                        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+                            <span class="badge badge-primary">Jacobi Iteration</span>
+                            <span class="badge badge-neutral">Simultaneous Updates</span>
+                        </div>
+                        <p style="font-size:0.88rem; line-height:1.6; margin-bottom:12px;">
+                            Decomposes coefficient matrix $A$ into diagonal $D$ and remainder $R$. Each variable is computed using solely the values from iteration $k$:
+                        </p>
+                        <div class="formula-card">
+                            <div class="formula-title">Mathematical Formula</div>
+                            <div class="formula-text">x<sub>i</sub><sup>(k+1)</sup> = (1 / a<sub>ii</sub>) &times; [b<sub>i</sub> &minus; &Sigma;<sub>j&ne;i</sub> a<sub>ij</sub> x<sub>j</sub><sup>(k)</sup>]</div>
+                        </div>
+                        <p style="font-size:0.8rem; color:var(--text-secondary); margin-top:10px;">
+                            &bull; Trivially parallelizable across compute threads<br>
+                            &bull; Requires diagonal dominance (|a<sub>ii</sub>| &gt; &Sigma;|a<sub>ij</sub>|)
+                        </p>
+                    </div>
+
+                    <div class="card" style="background:#FFFDFD; border-left: 3px solid var(--accent-secondary);">
+                        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+                            <span class="badge badge-secondary">Gauss-Seidel Method</span>
+                            <span class="badge badge-neutral">In-Place Updates</span>
+                        </div>
+                        <p style="font-size:0.88rem; line-height:1.6; margin-bottom:12px;">
+                            Accelerates convergence by substituting newly computed values immediately within the same iteration pass:
+                        </p>
+                        <div class="formula-card wine">
+                            <div class="formula-title">Mathematical Formula</div>
+                            <div class="formula-text">x<sub>i</sub><sup>(k+1)</sup> = (1 / a<sub>ii</sub>) &times; [b<sub>i</sub> &minus; &Sigma;<sub>j&lt;i</sub> a<sub>ij</sub> x<sub>j</sub><sup>(k+1)</sup> &minus; &Sigma;<sub>j&gt;i</sub> a<sub>ij</sub> x<sub>j</sub><sup>(k)</sup>]</div>
+                        </div>
+                        <p style="font-size:0.8rem; color:var(--text-secondary); margin-top:10px;">
+                            &bull; Typically converges in ~50% fewer iterations<br>
+                            &bull; Lower spectral radius &rho;(T) yields faster residual decay
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5. Educational Disclaimer -->
+            <div class="disclaimer-banner">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                <div>
+                    <strong>Educational Project Model:</strong>
+                    ChemicalMix is built for the college Python Programming and Visual Computing (PPVC) curriculum. The algorithms assume ideal volume additivity and compatible solutions. Not intended as a certified chemical safety assessment.
+                </div>
+            </div>
+
+        </main>
+    </div>
+</div>
+
+<script src="/js/app.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    // 1. Display total calculation count from localStorage
+    const countEl = document.getElementById('overviewTotalCalcCount');
+    const total = getTotalCalculationCount();
+    if (countEl) countEl.textContent = total.toLocaleString();
+
+    // 2. Render actual history or clean empty state
+    const container = document.getElementById('recentCalculationsContainer');
+    const history = getCalculationHistory();
+
+    if (!history || history.length === 0) {
+        container.innerHTML = `
+            <div style="text-align:center; padding: 40px 20px; background: var(--bg-primary); border-radius: var(--radius-sm); border: 1px dashed var(--border-color);">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--text-tertiary)" stroke-width="1.5" style="margin-bottom:12px;"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                <h3 style="font-size:1.05rem; font-weight:600; color:var(--text-primary); margin-bottom:4px;">No Calculation History Recorded</h3>
+                <p style="font-size:0.86rem; color:var(--text-secondary); max-width:440px; margin:0 auto 18px;">
+                    You haven't run any mixing calculations yet. Launch the calculator to configure concentrations and solve.
+                </p>
+                <a href="/pages/calculator.html" class="btn btn-primary btn-sm">Open Solution Calculator</a>
+            </div>
+        `;
+    } else {
+        let tableHTML = `
+            <div class="table-wrapper">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Inputs</th>
+                            <th>Target %</th>
+                            <th>Total Vol</th>
+                            <th>Calculated Volumes</th>
+                            <th>Jacobi Iters</th>
+                            <th>GS Iters</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+        `;
+
+        history.slice(0, 5).forEach(item => {
+            const timeStr = new Date(item.timestamp).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+            const concStr = item.concentrations ? item.concentrations.map((c, i) => `Sol ${String.fromCharCode(65+i)}: ${c}%`).join(', ') : '—';
+            const volStr = item.volumes ? item.volumes.map(v => Number(v).toFixed(2) + 'L').join(' + ') : '—';
+            tableHTML += `
+                <tr>
+                    <td style="color:var(--text-secondary); font-family:var(--font-sans);">${timeStr}</td>
+                    <td style="font-family:var(--font-sans);">${concStr}</td>
+                    <td><strong>${item.targetConcentration}%</strong></td>
+                    <td>${item.totalVolume} L</td>
+                    <td><strong>${volStr}</strong></td>
+                    <td>${item.jacobiIters ?? '—'}</td>
+                    <td><span style="color:var(--accent-primary); font-weight:600;">${item.gsIters ?? '—'}</span></td>
+                    <td><span class="badge ${item.converged ? 'badge-success' : 'badge-warning'}">${item.converged ? 'Converged' : 'Solved'}</span></td>
+                </tr>
+            `;
+        });
+
+        tableHTML += `
+                    </tbody>
+                </table>
+            </div>
+        `;
+        container.innerHTML = tableHTML;
+    }
+});
+</script>
+</body>
+</html>
